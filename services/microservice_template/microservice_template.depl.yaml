@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs.container
+  name: microservice_template.deployment
 spec:
   selector:
     matchLabels:
-      app: nodejs.container
+      app: microservice_template
   template:
     metadata:
       labels:
-        app: nodejs.container
+        app: microservice_template
     spec:
       containers:
-      - name: nodejs.container
-        image: 
+      - name: microservice_template_dev_k8s.container
+        image: microservice_template_dev_k8s.image
         resources:
           limits:
             memory: "128Mi"

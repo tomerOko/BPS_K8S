@@ -1,0 +1,12 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata: 
+  name: bps_template
+build:
+  artifacts:
+  - image: microservice_template_dev_k8s.image
+    context: ../../servers/microservice_template/development
+deploy:
+  kubectl:
+    manifests:
+      - "../services/microservice_template/microservice_template.depl.yaml "
